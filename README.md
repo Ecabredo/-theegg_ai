@@ -1,2 +1,2 @@
 # -theegg_ai
-Rep de tarea The Egg
+Rep de tareas The Egg
