@@ -1,0 +1,23 @@
+Ctrl+Enter    Run code
+Ctrl+S        Save session
+
+Console 
+Shortcuts
+
+Enter         Evaluate the entered command.
+Shift+Enter   Continue to the next line.
+Tab           Indent.
+Shift+Tab     Unindent.
+Up            Previous history item.
+Down          Next history item.
+Ctrl+Up       Move to the line above the cursor.
+Ctrl+Down     Move to the line below the cursor.
+Ctrl+E        Move to the end of the current line.
+Ctrl+A        Move to the start of the current line.
+Ctrl+K        Clears the console.
+Ctrl+Z        Cancel current prompt.
+Ctrl+L        Open languages selector.
+Ctrl+G        Open examples preview.
+Ctrl+H        Open this help page.
+Ctrl+S        Save session (new revision).
+Escape        Close current view
