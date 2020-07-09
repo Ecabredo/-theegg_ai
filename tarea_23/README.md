@@ -23,7 +23,7 @@
 		
 			
 	• Ejecución del programa para el evaluador
-	Se debe llamar a la función solitario, sin utilizar ningún parámetro de entrada à solitario()
+	Se debe llamar a la función solitario, sin utilizar ningún parámetro de entrada de entrada: solitario()
 	
 	• Pasos significativos seguidos en el programa:
 		○ Definición de la baraja:
