@@ -1,6 +1,9 @@
+	• Ejecución del programa para el evaluador
+	Se debe llamar a la función solitario, sin utilizar ningún parámetro de entrada de entrada: solitario()
+		
 	• Razonamiento 
-		a. Se genera el alfabeto inglés, posicionando cada letra en el número correspondiente. De esta forma; A=1, B=2…Se detallará el procedimiento seguido en pasos significativos seguidos en el programa. 
-		b. Se deben generar dos barajas de cartas inglesas y barajarlas de la misma manera. Se detallará el procedimiento seguido en pasos significativos seguidos en el programa. 
+		a. Se genera el alfabeto inglés, posicionando cada letra en el número correspondiente. De esta forma; A=1, B=2…Se detallará el procedimiento seguido en pasos 			significativos seguidos en el programa. 
+		b. Se deben generar dos barajas de cartas inglesas y barajarlas de la misma manera. Se detallará el procedimiento seguido en pasos significativos seguidos en 			el programa. 
 		Cada carta tiene un valor, de acuerdo a la siguiente clasificación:
 			- Trébol: +0
 			- Diamante: +13
@@ -14,16 +17,13 @@
 		d. Generación de la carta resultado (se define la función f_keystream):
 			1. Encontrar el joker_a y posicionarlo tras las siguiente carta.
 			2. Encontrar el joker_b y posicionarlo dos cartas por detrás de su posición actual. 
-			Para estos dos primeros pasos hay que tener en cuenta que la baraja se debe tratar de manera circular; esto es, si el joker_a es la última carta, se deberá posicionar como la segunda carta de la baraja, justo por detrás de la primera. Análogamente, si el joker_b es la última carta, se deberá colocar como la tercera carta de la baraja, justo por detrás de la segunda. 
-			3. Triple corte: independientemente de que sea el joker_a o joker_b, se identifican todas las cartas que queden por encima del primer joker. De la misma forma, se identifican todas las cartas que queden por debajo del segundo joker. Se invierten las posiciones: las cartas por encima del primer joker pasan a estar debajo del segundo joker. Las cartas por debajo del segundo joker pasan a estar por encima del primero.
-			4. Corte de cuenta: se identifica el valor de la última carta. Se cuenta el número de cartas igual al valor de la última carta, empezando por la primera. Se coloca ese número de cartas encima de la última carta. De esta manera, la última carta no cambia.
-			5. Identificar la carta resultado: a partir del valor de la primera carta, se cuenta el número de cartas a partir de la primera. Se selecciona el valor de la siguiente carta. 
+			Para estos dos primeros pasos hay que tener en cuenta que la baraja se debe tratar de manera circular; esto es, si el joker_a es la última carta, se 			     deberá posicionar como la segunda carta de la baraja, justo por detrás de la primera. Análogamente, si el joker_b es la última carta, se deberá 				colocar como la tercera carta de la baraja, justo por detrás de la segunda. 
+			3. Triple corte: independientemente de que sea el joker_a o joker_b, se identifican todas las cartas que queden por encima del primer joker. De la 			   misma forma, se identifican todas las cartas que queden por debajo del segundo joker. Se invierten las posiciones: las cartas por encima del primer                           joker pasan a estar debajo del segundo joker. Las cartas por debajo del segundo joker pasan a estar por encima del primero.
+			4. Corte de cuenta: se identifica el valor de la última carta. Se cuenta el número de cartas igual al valor de la última carta, empezando por la                               primera. Se coloca ese número de cartas encima de la última carta. De esta manera, la última carta no cambia.
+			5. Identificar la carta resultado: a partir del valor de la primera carta, se cuenta el número de cartas a partir de la primera. Se selecciona el                              valor de la siguiente carta. 
 			
-		e. Definición de la función de cifrado y descifrado, en las cuáles se utilizan como parámetros de entrada la baraja, el texto de entrada, los valores numéricos del texto obtenido del alfabeto, la suma entre dichos valores numéricos y las cartas resultado, y el resultado cifrado. Los últimos tres parámetros se introducen con el objetivo de que sean devueltos por la función.
+		e. Definición de la función de cifrado y descifrado, en las cuáles se utilizan como parámetros de entrada la baraja, el texto de entrada, los valores 			numéricos del texto obtenido del alfabeto, la suma entre dichos valores numéricos y las cartas resultado, y el resultado cifrado. Los últimos tres parámetros 		      se introducen con el objetivo de que sean devueltos por la función.
 		
-			
-	• Ejecución del programa para el evaluador
-	Se debe llamar a la función solitario, sin utilizar ningún parámetro de entrada de entrada: solitario()
 	
 	• Pasos significativos seguidos en el programa:
 		○ Definición de la baraja:
@@ -33,7 +33,7 @@
 			- Se define diccionario con las correspondencias numéricas de los palos de la baraja:
 			d_palo = [{"palo":"trebol", "val":0}, {"palo":"diamante", "val":13}, {"palo":"corazon", "val":26},{"palo":"pica", "val":39}]
 			
-			- Se genera bajara con los palos, número o literales y sus valores correspondientes. Después se genera la baraja y se introduce un nuevo campo en cada diccionario (cada carta es un diccionario) con el valor adaptado:
+			- Se genera bajara con los palos, número o literales y sus valores correspondientes. Después se genera la baraja y se introduce un nuevo campo en cada 				diccionario (cada carta es un diccionario) con el valor adaptado:
 			l_baraja = []
 			l_palos = ["trebol", "diamante", "corazon", "pica"]
 			l_num = ["A", 2, 3,4,5,6,7,8,9,10,"J", "Q", "K"]
