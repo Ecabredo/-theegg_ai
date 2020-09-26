@@ -1,0 +1,46 @@
+Ejemplo práctico:
+
+	• IP: 192.190.0.0 se solicitan tres subredes de esta IP
+
+	1. Identificar la clase: se trata de una red de Clase C, ya que esta clase representa aquellas Ips cuyo primer octeto va desde el 192 hasta el 223.
+	
+	2. Identificar la máscara a partir de la Clase. La máscara correspondiente a la Clase C es 255.255.255.0. Por lo tanto, esta máscara contiene 24 bits de red y 8 bits de host. Otra manera de representarlo es 192.190.0.0/24. 24 indicado el número de bits de red.
+		a. Representación binaria de la máscara: 11111111.11111111.11111111.00000000
+Los bits de red se representan en rojo. Los bits de host se representan en azul.
+		
+	3. Teniendo en cuenta que con 1 solo bits se hacen dos subredes, necesitamos 2 bits para crear tres subredes. Con dos bits se generan tres subredes, por lo que nos sobraría uno.
+	Nueva máscara con cuatro subredes: 11111111.11111111.11111111.11000000
+	
+	4. Se pone la máscara en notación decimal: 255.255.255.192
+	
+	5. Calcular cuáles son las posibles subredes, esto es, de qué dirección IP a qué dirección IP van. 
+		a. 8 bits son capaces de 256 direcciones IPs: desde .0 a 255. Tengo 8 bits de host, 1 byte, en el que hay 256 posibles Ips.
+		b. Lo que se ha hecho al utilizar la máscara es dividir esas 256 combinaciones dividirlas en 4, ya que se han generado 4 subredes en el último byte. Por lo tanto, a cada subred le corresponden 256/4 direcciones IP. 
+256/4 = 64 à incrementos que va a tener la dirección IP en cada una de las subredes. 
+
+Subredes:
+		1. La primera dirección IP que tendríamos en la primera subred es: 192.190.0.0
+		2. La segunda subred empieza en la IP: 192.190.0.64
+		3. La tercera subred empieza en la IP: 192.190.0.128
+		4. La cuarta subred empieza en la IP: 192.190.0.192
+		
+	6. Estas direcciones están reservadas:
+		○ Dirección de red: cada una de las posibles subredes. 
+			1. 192.190.0.0
+			2. 192.190.0.64
+			3. 192.190.0.128
+			4. 192.190.0.192
+			
+		○ Dirección de broadcast: últimas direcciones de cada subred. Siguiendo el ejemplo: 
+			1. 192.190.0.63
+			2. 192.190.0.127
+			3. 192.190.0.191
+
+	Ideas clave:
+	• ¿Cuántas subredes se pretender crear? Hay que tener en cuenta que un bits prestados por los bits de host representa 2 subredes. 
+	Nº de subredes = 2nº de bits prestados por la red de host. 
+	• ¿Cuántas direcciones IP le corresponden a cada subred? Hay que tener en cuenta que 1 byte (8 bits) son 256 direcciones IP.
+	Nº de direcciones IP = 2nº de bits disponibles en la red de host
+
+	
+	
