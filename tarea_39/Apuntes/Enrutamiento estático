@@ -1,0 +1,28 @@
+Unir tres redes  con tres routers utilizando enrutamiento estático. 
+
+	1. Para la conexión entre los routers se utilizan interfaces serie:
+	Primero se debe apagar el routers. Después se añade la interfaz. A continuación se vuelve a encender el router.
+	
+	2. Se realiza la conexión entre los routers.
+	El primer router que se selecciona en cada conexión es al que debe configurar la opción "clock rate".
+	
+	3. Se agregan los tres swicth y los 6 PCs (2 PCs/switch).
+	4. Se conectan los switches a los router correspondientes, mediante el puerto 24. 
+	5. Configuración de los routers:
+		a. Enable
+		b. Config t
+		c. !Ethernet
+			i. Interface fastEthernet 0/0
+			ii. Ip address 192.168.1.1 255.255.255.0
+			iii. No shutdown
+			iv. Exit
+		d. !serial
+			i. Interface serial 0/0
+			ii. Ip address 200.33.146.1 255.255.255.252
+			iii. Clock rate 56000
+			iv. No shutdown
+			v. No keepalive
+			vi. Exit
+		e. !enrutamiento estático
+			i. Ip route 10.1.50.0 255.255.255.0 200.33.146.2
+			ii. Ip route 172.16.1.0 255.255.255.0 200.33.146.2
