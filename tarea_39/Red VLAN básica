@@ -1,0 +1,37 @@
+Configuración del switch:
+	1. Crear un VLAN:
+		a. Enable
+		b. Config t
+		c. VLAN2 
+		d. Name SISTEMAS
+		e. EXIT
+		Para salir del modo configuración: Ctrl+C
+	
+	2. Comprobar la configuración: sh vlan
+  ¿A qué VLAN están asignadas las distintas interfaces? Todas las interfaces están asignadas a la VLAN por defecto.
+	
+	3. Asignar a la VLAN 2 las interfaces 1 y 2. Asignar a la VLAN 3 las interfaces 3 y 4.
+		a. Config t
+		b. Interface fastEthernet 0/1
+		c. Switchport access vlan2 
+		d. Exit 
+		
+	4. Comprobar configuración: sh vlan
+	¿A qué VLAN están asignadas las distintas interfaces? Las interfaces 1 y 2 asignadas a la vlan 2 (SISTEMAS) y las interfaces 3 y 4 asignadas a la vlan 3 (RECURSOSHUMANOS)
+	
+	5. Configurar los equipos de red. 
+		a. Dos computadoras deben estar en la red IP: 172.16.1.0/24 // Otras dos computadoras deben estar en la red 172.16.2.0/24
+		b. Mask: 255.255.255.0
+
+	6. Pruebas de conectividad: comprobar que lo equipos de una misma VLAN se comunican entre sí pero no con las otras. 
+  
+	7. Los switches se conectan mediante un cable cruzado. 
+  
+	8. Para haya comunicación entre los distintos PCs de una VLAN, se debe configurar el puerto donde se conectan los switches. En este caso, el puerto 24, en modo trunk. Por lo tanto, en ambos switches:
+		a. Config t
+		b. Interface fastEthernet 0/24
+		c. Switchport mode trunk
+		d. Sh interface trunk: comando para ver  las interfaces en modo trunk. 
+		
+	9. Comprobar si se comunican los equipos de la misma VLAN. 
+	
