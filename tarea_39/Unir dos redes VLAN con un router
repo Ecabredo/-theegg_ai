@@ -1,0 +1,20 @@
+	• Al configurar los PCs: la puerta de enlace o Gateway de cada PC deberá ser las dirección IP del router en su respectiva interfase
+	
+	• Para que exista comunicación entre las distintas VLAN, se agrega el router. La conexión se realiza mediante un cable de cobre directo, desde el puerto 24 del switch. 
+	
+	• Se configuran las interfaces del router con la IP que se empleó como gateway para cada VLAN. Desde el CLI del router:
+		○ Enable
+		○ Config t
+		○ Interface fastEthernet 0/0.1 à se hace referencia a cada interface virtual como 0/0.X donde 0/0  es la interface física y la X la virtual.
+		○ Encapsulation dot1q 2 à número de vlan
+		○ Ip adsress 172.16.1.1 255.255.255.0
+		○ Exit
+		
+	• Se prende la interface física 0/0
+		○ Interface fastEthernet 0/0
+		○ No shutdown
+		
+
+	
+	
+	
