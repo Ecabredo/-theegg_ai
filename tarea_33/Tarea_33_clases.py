@@ -3,7 +3,7 @@ class Pokemon:
         self.vida   = vida
         self.ataque = ataque
 
-"""         self.vida   = int(input("Vida del Pokemon  "))
+"""         self.vida   = int(input("Vida del Pokemon  ")) Otra alternativa sería definir la clase Pokemon sin argumento e introducirlos desde la consola.
         self.ataque = int(input("Ataque del Pokemon "+))      
  """
 Pok_1 = Pokemon(int(input("Vida del Pokemon nº1: ")),int(input("Ataque del Pokemon nº1: ")))
