@@ -37,8 +37,6 @@ pattern = '[A-Za-z0-9\u00C0-\u00FF]+|' + pattern
 #pattern = '\»|\«|\"|\~|\}|\||\{|\`|\_|\^|\]|\\|\[|\@|\?|\>|\=|\<|\;|\:|\/|\.|\-|\,|\+|\*|\)|\(|\'|\&|\%|\$|\#|\"|\!'
 print(pattern)
 
-#test
-
 
 text = input("Introduce el texto que quieres analizar: ")
 #De  la siguiente manera, se podría codificar en ascii para admitir acentos del castellano. Después, se descodifica para tratarlo como un string y no como tipo bytes. 
@@ -66,3 +64,5 @@ print('El número de palabras es: ' + str(v_len_word))
 
 
 contarFrec(l_word)
+
+#Test para commits desde VisualCode a GitHUb.
