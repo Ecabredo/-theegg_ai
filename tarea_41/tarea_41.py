@@ -12,6 +12,8 @@ v_char = string.printable
 
 #Lista de carcateres especiales
 l_symbols = v_char.translate({ord(i):None for i in '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\t\n\r\x0b\x0c'})
+
+#Se eliminan de la lista de caracteres extraños \t, \n, \r -- tab, newline, return
 l_symbols = list(v_char.translate({ord(i):None for i in '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\t\n\r\x0b\x0c'}))
 l_symbols.remove(' ')
 

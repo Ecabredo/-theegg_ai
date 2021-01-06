@@ -1,7 +1,7 @@
 Cálculo del número de caracteres: 
 Se consideran caracteres todas aquellas letras y signos de escritura. Así, se consideran como caracteres las letras, números y signos del latín (Unicode Latin-1).
 Los pasos seguidos para la obtención del número de carcateres ha sido:
-  1. Se obtiene la lista de todos los carcateres especiales que se quiere considerar.
+  1. Se obtiene la lista de todos los carcateres especiales que se quiere considerar. En este caso, se ha considerado eliminar \t, \n, \r -- tab, newline, return.
   2. Se construye un patrón con los carcateres extraños, teniendo en cuenta las expresiones regulares \\ (representación del sentido literal del caracter) y | (operando lógico or).
   3. Se añade al patrón el rango Unicode Latin-1 Supplement para cotemplar los caracteres acentuados y otros caracteres extraños.
   4. Se solicita el texto a evaluar. El texto se debe copiar desde un word, ya que desde pdf no lo cogía correctamente.
