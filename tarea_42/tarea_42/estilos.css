@@ -1,0 +1,97 @@
+* { /*Se aplica a todos los elementos. Se eliminan los márgenes y los bordes. Se trata de una manera de eliminar los formatos por defecto del navegador*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { /*Hero Patterns: página web donde obtener distintos diseños de background*/
+    background-color: #3b393d;
+    background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 0H0v36h36V0zM15.126 2H2v13.126c.367.094.714.24 1.032.428L15.554 3.032c-.188-.318-.334-.665-.428-1.032zM18 4.874V18H4.874c-.094-.367-.24-.714-.428-1.032L16.968 4.446c.318.188.665.334 1.032.428zM22.874 2h11.712L20 16.586V4.874c1.406-.362 2.512-1.468 2.874-2.874zm10.252 18H20v13.126c.367.094.714.24 1.032.428l12.522-12.522c-.188-.318-.334-.665-.428-1.032zM36 22.874V36H22.874c-.094-.367-.24-.714-.428-1.032l12.522-12.522c.318.188.665.334 1.032.428zm0-7.748V3.414L21.414 18h11.712c.362-1.406 1.468-2.512 2.874-2.874zm-18 18V21.414L3.414 36h11.712c.362-1.406 1.468-2.512 2.874-2.874zM4.874 20h11.712L2 34.586V22.874c1.406-.362 2.512-1.468 2.874-2.874z' fill='%2326222c' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    color: #b2bec3;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #dfe6e9;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+/*Navigation*/
+.nav-main{
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between; /*Para utilizar todo el ancho disponible*/
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+}
+
+/*Navegación izquierda*/
+.nav-main ul {
+    display: flex; /*Para colocar cada elemento al lado del otro*/
+}
+
+.nav-main ul li { /*Para separar cada elemento de la lista*/
+    padding: 10px;
+}
+
+.nav-main ul li a:hover { /*subclase hover para que salga el elemento border-bottom cuando posicionamos el ratón sobrea cada a*/
+    border-bottom: 2px solid white;
+}
+
+.nav-main ul.nav-menu {
+    flex: 1;
+    margin-left: 0px;
+}
+
+.menu-btn-nav {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    font-size: 1.5rem; /*El botón, que se ha obtenido de font awesome, no deja de ser una fuente*/
+    /*Resulta que el botón está encima del icono del buscador, por lo que se mueve ligeramente hacia la izquierda*/
+    /*Por defecto, en pantalla grande, no debe aparecer*/
+    display: none;
+}
+
+.video {
+    text-align: center;
+}
+.video iframe {
+    width: 600px;
+    height: 350px;
+    padding: 20px 10px;    
+}
+
+.social {
+    margin: 50px; 
+}
+.social p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+}
+
+.links a {
+    margin: 0 30px;
+}
+
+.links a i {
+    font-size: 2rem;
+}
+

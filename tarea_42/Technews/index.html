@@ -1,0 +1,294 @@
+<!--Para crear un servidor y subir el html al servidor local, se instala la extensión Live Server-->
+<!--F1, Live server open with liver server. Así se abre un servidor en un puerto, que es donde estará nuestra página. Esto tiene la ventaja de que se actualiza directamente. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technews</title>
+    <!--FONT AWESOME: se utiliza el siguiente enlace para el icono de buscar, creado en la etiqueta a-->
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!--FONT OSWALD: fuente de nuestra página web-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <!--SCROLL REVEAL: para que los elementos aparezan con el desplazamiento del scroll. Los scripts se pegan al final.-->
+
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="estilos.css"> <!--Se indica el fichero de estilos que se está utilizando.-->
+
+</head>
+<body>
+    
+    <!--Botón: se le coloca un icono de font-awesome. Se crea un botón de opciones. La idea es que de paso a la navegación-->
+    <button class="menu-btn">
+        <i class="fas fa-bars"></i>
+
+    </button>
+
+    <div class="container">             <!--Como queremos que el contenido esté centrado, creamos la clase container-->
+        <nav class="nav-main">          <!--La etiqueta nav va a contener toda la navegación. Como queremos estilizar el contenido, creamos la clave nav-main-->
+            <img src="IMG/Technews_nav.png" alt="Technews Logo" class="nav-brand"> <!--Se coge la imagen de la carpeta. Texto alternativo con alt. Además, se crea la clase para darle el formato.-->
+            <ul class="nav-menu show">
+                <li>
+                    <a href="#">Web Development</a> <!--El asterísco se pone porque de esta manera en enlace no va a llevar a ningún lugar-->
+                </li>
+                <li>
+                    <a href="#">Blockchain</a> 
+                </li>
+                <li>
+                    <a href="#">Artificial Intelligence</a> 
+                </li>
+                <li>
+                    <a href="#">Web Development</a> 
+                </li>
+                <li>
+                    <a href="#">Machine Learning</a> 
+                </li>
+                <li>
+                    <a href="#">Quantum Computing</a> 
+                </li>
+                <li>
+                    <a href="#">StartUp</a> 
+                </li>
+                <li>
+                    <a href="#">More</a> 
+                </li>
+            </ul>
+            <ul class="nav-menu-right">
+                <a href="#">
+                    <i class="fas fa-search"></i> <!--clase del font awesome para icono de la lupa.-->
+                  
+
+                </a>
+            </ul> 
+        </nav>
+        <hr> <!--Añade una línea debajo de la navegación-->
+
+        <!--SHOWCASE: imagen principal de la página debajo del navegador -->
+        <header class="showcase">
+            <h2>Big News Today</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus maxime nihil vero temporibus minima nostrum. Aliquid porro consequatur mollitia excepturi.</p> 
+            <!--lorem20 genera 20 palabras aleatoria para comprobar cómo se visualiza la página. Si se han escrito demasiadas palabras y se quiere ver el código el múltiples línea: View, Toggle Word Wrap-->
+
+            <!--A continuación, se crea un enlace que en este caso no lleva a ninguna parte. Al lado, se coloca una etiqueta de font awesome-->
+            <a href="#" class="btn">Read More</a> <i class="fas fa-angle-double-right"></i> </a>
+
+        </header>
+
+        <!--NEWS CARDS: se crean cuatro columnas donde se posiciona más noticias-->
+        <div class="news-cards">
+            <div> <!--Cada columna, que es una sección, será una etiqueta div y contendrá una imagen, una etiqueta h3 con un texto de tres letras y una etiqueta p con un texto de de 10 letras. También se añade un enlace que no lleva a ninguna parte y un icono de font awesome.-->
+                <img src="IMG/news_1.jpeg" alt="News 1">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, quisquam!</p>
+                <a href="#">Learn More<i class="fas fa-angle.fa-angle-double-right"></i></a>
+            </div>
+            <div> 
+                <img src="IMG/news_2.jpg" alt="News 2">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, quisquam!</p>
+                <a href="#">Learn More<i class="fas fa-angle.fa-angle-double-right"></i></a>
+            </div>
+            <div> 
+                <img src="IMG/news_3.jpeg" alt="News 3">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, quisquam!</p>
+                <a href="#">Learn More<i class="fas fa-angle.fa-angle-double-right"></i></a>
+            </div>
+            <div> 
+                <img src="IMG/news_4.jpeg" alt="News 4">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, quisquam!</p>
+                <a href="#">Learn More<i class="fas fa-angle.fa-angle-double-right"></i></a>
+            </div>
+        </div>
+
+        <!--Para crear el banner, se utiliza la siguiente etiqueta:-->
+        <section class="cards-banner-one">
+            <div class="content">
+                <h2>Lorem, ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quia, eaque odit deserunt at dolor nesciunt. Itaque nam eligendi alias.
+                </p>
+                <!--Enlace que no lleva a ninguna parte y un icono de font awesome-->
+                <a href="#" class="btn">Learn More<i class="fas fa-angle-double-right"></i></a>
+
+            </div>
+
+        </section>
+
+
+        <!--NEWS CARDS: se crean cuatro columnas donde se posiciona más noticias-->
+        <div class="news-cards">
+            <div> <!--Cada columna, que es una sección, será una etiqueta div y contendrá una imagen, una etiqueta h3 con un texto de tres letras y una etiqueta p con un texto de de 10 letras. También se añade un enlace que no lleva a ninguna parte y un icono de font awesome.-->
+                <img src="IMG/news_1.jpeg" alt="News 1">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, quisquam!</p>
+                <a href="#">Learn More<i class="fas fa-angle.fa-angle-double-right"></i></a>
+            </div>
+            <div> 
+                <img src="IMG/news_2.jpg" alt="News 2">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, quisquam!</p>
+                <a href="#">Learn More<i class="fas fa-angle.fa-angle-double-right"></i></a>
+            </div>
+            <div> 
+                <img src="IMG/news_3.jpeg" alt="News 3">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, quisquam!</p>
+                <a href="#">Learn More<i class="fas fa-angle.fa-angle-double-right"></i></a>
+            </div>
+            <div> 
+                <img src="IMG/news_4.jpeg" alt="News 4">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, quisquam!</p>
+                <a href="#">Learn More<i class="fas fa-angle.fa-angle-double-right"></i></a>
+            </div>
+        </div>
+
+        <!--Para el próximo baner se utilizarán clases diferentes-->
+        <section class="cards-banner-two">
+            <div class="content">
+                <h2>Lorem, ipsum dolor.</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur magni, libero architecto ea corporis non repudiandae vero voluptate, perferendis nesciunt quasi voluptas? Nesciunt maxime sit adipisci magni dolore cumque vitae?</p>
+                <a href="#" class="btn">Lear More <i class="fas fa-angle-double-right"></i></a>
+            </div>
+
+        </section>
+
+        <!--Enlaces para redes sociales al final de la página-->
+        <section class="social">
+            <p>Follow Technews</p>
+            <div class="links">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer-links">
+        <div class="footer-container">
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>Title One</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>Title One</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>Title One</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <h3>Title One</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+                <li>
+                    <a href="#">Blockchain</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h3>Tech News Copyright</h3>
+    </footer>
+
+    <!--SCROLL REVEAL-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--CUSTOM JS-->
+    <script src="main.js"></script>
+     
+</body>
+</html>

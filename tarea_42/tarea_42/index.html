@@ -1,0 +1,82 @@
+<!--Se diseña la estructura básica de HTML para verla en el navegador-->
+
+
+<!--Dentro de la cabecera, se indican los distintos enlaces que se utilizan en la página-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Egg: primera página web</title>
+    
+    <!--FONT AWESOME: para obtener iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!--FONT UBUNTU: para la fuente que se utilizará en la página-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"> 
+
+     <!--CUSTOM CSS: para enlazar el html con el archivo css con la que se estilizará la página-->
+     <link rel="stylesheet" href="estilos.css"> 
+</head>
+
+
+<body>
+    <!--Se coge uno de los iconos de font awesome: un botón para la navegación-->
+    <button class="menu-btn-nav">
+        <i class="fas fa-bars"></i>
+    </button>  
+
+    <div class="container">
+        <nav class="nav-main">
+            <ul class="nav-menu"> <!--Unordered list: se introducen items, que son enlaces (etiqueta a) que no llevan a ninguna parte, dentro de la navegación-->
+                <li>
+                    <a href="#">Python</a>
+                </li>
+                <li>
+                    <a href="#">JavaScript</a>
+                </li>
+                <li>
+                    <a href="#">HTML5</a>
+                </li>
+                <li>
+                    <a href="#">CSS</a>
+                </li>
+                <li>
+                    <a href="#">R Studio</a>
+                </li>
+                <li>
+                    <a href="#">More</a>
+                </li>
+            </ul>
+            <ul class="nav-menu-right"> <!--Después de la navegación, se introduce un icono de búsqueda de font-awesome-->
+                <a href="#"><i class="fas fa-search"></i></a>
+            </ul>
+        </nav>
+        <hr> <!--Se añade una línea debajo de la navegación.-->
+
+        <!--SHOWCASE: parte principal de la página web, donde se dispondrá de un video. -->
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/Q2imkhmhOFo" frameborder="0px" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!--Enlaces para redes sociales al final de la página-->
+        <section class="social">
+            <p>Follow us</p>
+            <div class="links">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </section>
+
+
+    </div>
+
+</body>
+</html>

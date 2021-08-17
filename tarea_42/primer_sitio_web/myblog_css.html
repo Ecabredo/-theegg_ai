@@ -1,0 +1,110 @@
+<!DOCTYPE html>                               
+
+<html lang="es">                               
+        <head>                                   
+            <meta charset="utf-8" />           
+            <title>Myblog</title>   
+            <meta name="description" content="Esta es mi primera pagina web."/>                           
+            <meta name="author"   content="Ernesto" />  
+            <meta name="keywords" content ="Mi primer sitio, mi primera pagina, pagina web, blog" />
+            <!--Mediante l etiqueta style, se puede dar formato  los distintos elementos. Se trata de una alternativa a al agregación de CSS en línea-->
+            <!--Hay que tener en cuenta que se le agrega el formato a todas las etiquetas seleccionadas-->
+            <!--Mediante el atributo id de las etiquetas, se puede hacer que el formato afecte únicamente a determinados elementos-->
+            <!--Otro atributo común para todas las etiquetas es class. Mediante class, se define un estulo que afecta a todas las estiquetas que contienen dicho atributo
+                En este caso, por ejemplo, se ha utilizado para uno de los artículos y para un párrafo-->
+            <!--También existe un selector universal, que haría que todo el contenido de la página tuviera el misom formato. * --> 
+            <!--Alterar todos los elementos que tengan el atributo cite: elemento[cite]-->   
+            <style>                                 
+                #cabecera{                          
+                    background: brown;
+                    color:burlywood;
+                }
+                footer{                          
+                    background: chartreuse;
+                }
+                #articulo_1{
+                    background: chocolate;
+                    color: darkblue;
+                }
+                .green{
+                    background: darkgreen;
+                }
+                blockquote[cite]{
+                    background: darkslategrey;
+                }
+
+            </style>
+        </head>
+        <body>
+            <header id="cabecera">                  <!--Mediante el atributo id se le puedo asignar un nombre unívoco. Se utiizan para describir elementos únicos-->      
+                <h1>Bienvenidos a mi Blog</h1>
+            </header>
+            <nav style="color: blue", id="navegacion">                              
+                <ul>                           
+                    <li>Principal</li>        
+                    <li>Ayuda</li>
+                    <li>Contacto</li>
+                </ul>
+                <ul>                            
+                    <li>Java</li>               
+                    <li>Python</li>
+                    <li>R</li>
+                </ul>
+            </nav>
+            <section>                          
+                <article>                
+                    <hgroup>                      
+                        <h1>Primer artículo</h1>
+                        <h2>Subtítulo del primer artículos</h2>
+                    </hgroup>
+                    <time datetime="09-01-2021">Publicado 09-01-2021</time> 
+                    <p>Lorem ipsum dolor sit amet consectetur,elit.  <small>Dolore nam alias</small>, est, corporis praesentium exercitationem neque saepe sequi rem quibusdam reprehenderit voluptas ratione possimus nobis, veritatis quam voluptate quos repellat!</p>
+
+                    <img src="Theegg_logo.png" /> 
+
+                    <footer>                        
+                        <p>Comentario (0)</p>
+                    </footer>
+                    <a href="https://theegg.ai/plataforma/">Accede a TheEgg</a>         
+              
+
+                    <address>
+                        <a href="http://facebook.com">Accede a Facebook</a>  
+                    </address>    
+                     
+
+                </article>
+                <article>
+                    <hgroup>
+                        <h1>Segundo artículo</h1>
+                        <h2>Subtítulo del segundo artículos</h2>
+                    </hgroup>
+                    
+                    <time datetime="09-01-2021">Publicado 09-01-2021</time>
+                    <p class="green">Lorem ipsum dolor sit amet consectetur adipisicing elit. <cite>id, neque minima quod aspernatur suscipit repudiandae beatae</cite>  in eveniet numquam tenetur inventore asperiores, quia necessitatibus cumque, alias nesciunt nobis obcaecati!</p>
+                
+                    <footer>
+                        <p>Comentario (10)</p>
+                    </footer>
+                </article>
+            </section>
+
+            <aside>                                         
+                <blockquote cite="http://www.google.es">    
+                    Mensaje 1
+                </blockquote>
+                
+                <blockquote cite = http://www.facebook.com>
+                    Mensaje 2
+                </blockquote>
+            </aside>
+            
+            <footer style="color: white; background:black">                <!--Agregar CSS en línea = Inline Style. El atributo style puede agregarse a todas las etiquetas. Background añade el color del fondo-->                   
+                Derechos Reservados 2021-2030
+
+            </footer>
+        </body>
+
+
+
+</html>

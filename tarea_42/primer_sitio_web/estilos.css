@@ -1,0 +1,117 @@
+* {                             /*Se resetean los margenes y paddings que traen por defecto todos los elementos. 
+    Se trata de una manera de resetear los estilos por defecto del navegador*/
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 20px;             /*Tamaño de la fuente*/
+    font-family: sans-serif;     /*Familiar de la fuente. Tipo de letra*/
+    font-weight: bold;           /*Textos en negrita (bold) o más claros (lighter)*/    
+}
+
+h2{                               /*Otra manera de escribirlo*/
+    font: bold 14px sans-serif;
+}
+
+/* header, section, footer, aside, nav, article, hgroup {   /*Aplicar un borde a cada elemento. Todos los elementos son el bloque, estos es, ocupan el mayor ancho ofrecido por el 
+dispositivo de visualización. Los textos del párrafo en cambio no son elementos en bloque, son elementos en línea*/ 
+/*    border: 1px solid black;
+      display: block;
+ }*/
+
+ body{                          /*Alineación de textos del body*/
+     text-align: center;  
+ }
+
+ .agrupar{                      /*Se crea una clase para que afecte a la división div, en el cual se ha añadido el atributo clase "agrupar".*/
+     width: 960px;
+     background: grey;
+     border: 1px solid brown;
+     /*margin-top: 200px;
+     margin-left: 200px;
+     margin-bottom: 500px;*/
+     margin: 15px auto;          /*Regla para ajustar márgenes: si pone únicamente auto, afectará tanto a Y como a X. Si pone 15px y auto, el 15px afecta al eje de as Y
+     poniendo las X como auto*/
+     padding: 40px;              /*Ampliación del recuadro de los elementos de div.*/
+ }
+
+ .header{
+     background: #54a0ff;      /*Se pueden añadir colores a partir del código hexadecimal*/
+     border: 1px solid #999999;
+     padding: 20px;
+ }
+
+ .header h1{
+     text-align: left;
+ }
+
+ .menu{
+     background: #ccc;
+     padding: 5px 15px;            /*También se puede poner un padding distinto para cada eje, al igual que con el padding.*/
+     text-align: left;
+ }
+
+ .menu li{                          /*Aplica a todos elementos li dentro de otro elemento con clase menu*/
+    list-style: none;               /*Se modifica el estilo por defecto de la lista, en este caso los bullets*/
+    padding: 5px;                   /*Se añade un espaciado interno de cada uno de los elementos li*/
+    font: bold 14px verdana;
+    border: 1px dashed floralwhite;
+    display:inline-block;           /*Los elementos están en bloque pero se quieren mostrar el línea.*/
+    text-align: left;
+
+ }
+
+ .seccion{
+    border: 1px dashed black;
+    margin: 20px; 
+    text-align: left;
+    width: 600px;
+    float: left;                    /*El elemento está flotando. Esto es, se sale del contenido*/
+ }
+
+ article{
+     background: #fffbcc;
+     border: 1px solid #999;
+     padding: 20px;
+     margin-bottom: 15px ;
+ }
+
+ article footer {
+     text-align: right;
+     margin-top: 20px;
+ }
+
+ .columna{
+     width: 30%;
+     border: 1px solid black;
+     float: left;
+     margin: 20px 0;
+ }
+
+ .columna blockquote{
+     border: 1px solid black;
+     padding: 40px;
+     background: #576574;
+     margin-bottom: 20px;
+ }
+
+ .pie{
+     clear: both;                   /*De esta manera, hace que el pie no flote y vuelva a su posición natural*/
+     padding: 20px;
+     background: #c8d6e5;
+ }
+
+ time{
+      color: #999;
+ }
+
+ img{ 
+     width: 80px;
+     display: block;
+     margin: auto 2px;
+ }
+
+
+
+ 

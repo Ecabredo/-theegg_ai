@@ -1,0 +1,311 @@
+* {                             /*Para que aplique a todos los elementos*/
+    box-sizing: border-box;     /*border-box*/
+    margin: 0;                  /*Se quita el box y el padding a todos los elementos*/
+    padding: 0;
+}
+
+/*Vamos a utiliza un patrón de fondo. Para ello, se crea el patrón desde www.heropatterns.com*/
+body {
+    background: #2d3436;
+    color: #b2bec3;
+    background-color: #e0dbe5;
+    background-color: #0b2458;
+    background-color: #0b2458;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%2300404e' fill-opacity='0.2'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    font-size: 16px;
+    /*google fonts oswald: se pega el link en el html*/
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    color: #dfe6e9;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+/*Navigation*/
+.nav-main{
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between; /*Para utilizar todo el ancho disponible*/
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+}
+
+.nav-brand{ /*La imagen debe ser más pequeña*/
+    width: 30px;
+}
+
+/*Navegación izquierda*/
+.nav-main ul {
+    display: flex; /*Para colocar cada elemento al lado del otro*/
+}
+
+.nav-main ul li { /*Para separar cada elemento de la lista*/
+    padding: 10px;
+}
+
+.nav-main ul li a:hover { /*subclase hover para que salga el elemento border-bottom cuando posicionamos el ratón sobrea cada a*/
+    border-bottom: 2px solid white;
+}
+
+.nav-main ul.nav-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.menu-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    font-size: 1.5rem; /*El botón, que se ha obtenido de font awesome, no deja de ser una fuente*/
+    /*Resulta que el botón está encima del icono del buscador, por lo que se mueve ligeramente hacia la izquierda*/
+    /*Por defecto, en pantalla grande, no debe aparecer*/
+    display: none;
+}
+
+
+
+/*Sowcase*/
+.showcase {
+    width: 100%;
+    height: 400px;
+    /*Como background se coloca una imagen, que se obtiene de la página pexels.com*/
+    background: url(./IMG/main_image.jpeg) no-repeat center/cover;
+    padding-bottom: 50px ;
+    display: flex;
+    flex-direction: column; /*Para que el texto esté debajo y centrado*/
+    align-items: center;
+    justify-content: flex-end;
+    color: aliceblue;
+    margin-bottom: 10px; /*Para separarlo de las columnas de abajo*/
+}
+
+/*A continuación se cambia el botón del final*/
+
+.btn {
+    cursor: pointer; /*Para que aparezca reflejado cada vez que se posiciones el ratón*/
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 5px 20px;
+    background: #262626;
+    color: #ffffff;
+    font-size: 15px;
+    border-bottom: 1px solid #ffffff;
+    margin: 10px 0px; /*Así, lo alejaos ligeramente del texto superior*/
+
+}
+
+/*Cuando el ratón se posiciona sobre el botón, se pretende crear un efecto*/
+.btn:hover{
+    opacity: 0.7;
+}
+
+/*Se cambian el h2 de big news y el texto inferior, de manera que haya espacio entre ambos y entre el texto y el botón*/
+.showcase h2,
+.showcase p {
+    margin-bottom: 10px;
+}
+
+/*Se separa la línea que se ha creado debajo de la navegación*/
+hr {
+    margin: 10px 0px; /*margen de 10px arriba y abajo y cero hacia los lados*/
+}
+
+/*NEWS CARDS*/
+/*URL para obtener imágenes:pexels.com*/
+.news-cards {
+    display: grid; /*Para mostrar los ejes de CSS*/
+    grid-template-columns: repeat(4, 1fr); /*Para construir las 4 columnas. Otra forma sería no utilizar repeat y poner 1fr 1fr 1fr 1fr*/
+    gap: 10px; /*Para espaciado interno entre las columnas*/
+    margin: 10px 0; /*Se incluye un margen de 10px arriba y abajo y cero hacia los lados*/
+}
+
+.news-cards img { /*Las imágenes deben ser más pequeñas que el tamaño original*/
+    width: 100%;
+    height: 180px;
+}
+.news-cards h3 {
+    font-size: 20;
+    margin: 10px 0;
+}
+
+/*A continuación, se cambian los enlaces para que luzcan como tal y no como textos*/
+.news-cards a {
+    border-top: 10px;
+    border-bottom: 1px;
+    color: #f2f2f2;
+    text-transform: uppercase; /*Se modifica el texto a mayúscula*/
+    display: inline-block;
+    font-weight: bold;   
+}
+
+.news-cards a:hover {
+    border-bottom: 0.5px dashed brown;
+}
+
+/*CARD BANNER ONE*/
+.cards-banner-one {
+    width: 100%;
+    height: 350px;
+    background: url(./IMG/banner.jpeg) no-repeat center/cover; /*Como fondo se utiliza una imagen*/
+    margin-bottom: 40px;
+}
+
+.cards-banner-one .content {
+    width: 40%;
+    padding: 90px 10px 30px; /*Margen superior e inferior de 90px, 10 hacia la derecha y 30px hacia la izquierda*/
+    color: cornsilk;
+}
+
+.cards-banner-one p, 
+.cards-banner-one h2 {
+    margin: 10px 0 20px; /*Se separan los textos contenidos en la etiqueta p y h1*/
+}
+
+/*CARDS BANNER TWO*/
+.cards-banner-two {
+    width: 100%;
+    height: 350px;
+    background: url(./IMG/banner_2.jpeg) no-repeat center/cover;
+}
+.cards-banner-two .content {
+    width: 50%;
+    padding: 100px 10px 30px; /*Margen superior e inferior de 90px, 10 hacia la derecha y 30px hacia la izquierda*/
+}
+
+.social {
+    margin: 50px; 
+}
+.social p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+}
+
+.links a {
+    margin: 0 30px;
+}
+
+.links a i {
+    font-size: 3rem;
+}
+
+/*FOOTER LINKS*/
+.footer-links {
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+ 
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-container ul {
+    margin: 0 auto;
+}
+
+.footer-container ul li {
+    line-height: 2.8;
+}
+
+.footer {
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/*Ctrl+SHIFT+I: para abrir la consola desde el navegador. Icono de Toogle Device toolbar para ver cómo ser vería la página web desde un dispositvo móbil.
+Como se observa, se descuadra todo. Para arreglarlo: */
+
+/*Cuando el ancho de la pantalla sea de 700px o inferior, la clase .news-cards mostrará dos columnas y no cuatro*/
+@media (max-width: 700px) {
+
+    .menu-btn {
+        display: block; /*Cuando el tamaño sea inferior al original, se quiere que el botón aparezca*/
+    }
+
+    .nav-main ul.nav-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #2f3640;
+        height: 100%;
+        transform: translateX(-400px); /*Para esconder el botón cuando la pantalla sea grande*/
+        padding: 30px;
+        opacity: .9;
+        transition: transform .5s ease-in-out; /*Para que el menú aparezca lentamente*/
+    }
+
+    /*Se pretende que cuando la pantalla sea pequeña, la navehación aparezca cuando se da al botón. No obstante, cuando la pantalla sea grande, el botón no debe aparecer.*/
+    /*Para ello, se añade la clase show, que se controlará medianta JS*/
+    .nav-main ul.nav-menu.show {
+        transform: translateX(-20px);;
+    }
+    .nav-main ul.nav-menu{
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    /*El icono del buscador se desplaza más a la izquierda para que s epueda ver el botón del navegador*/
+    .nav-main ul.nav-menu-right {
+        margin-right: 40px;
+    }
+    
+
+    .news-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cards-banner-one .content,
+    .cards-banner-two .content {
+        width: 80%;
+    }
+    .footer-links .footer-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+/*Caso de pantalla inferior a 500px*/
+@media (max-width: 500px) {
+    .news-cards {
+        grid-template-columns: 1fr;
+    }
+    .news-cards img {
+        height: 260px;
+    }
+    /*Para que el banner coja el tamaño completo*/
+    .cards-banner-one .content,
+    .cards-banner-two .content {
+       width: 100%;
+       padding: 60px 20px; 
+    }
+
+    .footer-links .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
