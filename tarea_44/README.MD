@@ -1,5 +1,5 @@
 
-Se define primero la función f_suma, que suma todos los número de uno a n mediante un bucle, desde el primero hasta n.
+Se define primero la función f_suma, que suma todos los números de uno a n mediante un bucle, desde el primero hasta n.
 
     suma     = 0
     suma + 1 = suma
@@ -30,4 +30,5 @@ para cada función:
 
 Conclusiones:
     f_suma: el tiempo requerido es (casi) directamente proporcional al incremento del tamaño de n. Crecimiento lineal. 
+            La momeria es insuficiente para ejecutar la última iteración.
     f_parejas: a pesar del incremento de n, el tiempo requerido es inapreciable.
