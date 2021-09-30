@@ -1,5 +1,6 @@
 from funciones_busqueda import f_nit_sec, f_nit_bin
 
+
 #Se crea un lista de elementos que se solicitarán al usuario.
 l_data = []
 while True:

@@ -12,12 +12,13 @@ def f_nit_sec(p_int, p_lista):
 #Se contabiliza en número de iteraciones mediante búsqueda binaria.
 def f_nit_bin(p_int, p_lista):
     n_int_bin = 1
-    p_lista.sort()
-    print("La lista ordenada es: " + str(p_lista))
+    l_sort = []
+    l_sort = sorted(p_lista)
+    #print("La lista ordenada es: " + str(l_sort))
     #print(len(p_lista))
     #print(p_lista[int(len(p_lista)/2)])
-    middle_index = int(len(p_lista)/2)
-    l_newlist = p_lista
+    middle_index = int(len(l_sort)/2)
+    l_newlist = l_sort
     while p_int != l_newlist[middle_index]:
         n_int_bin = n_int_bin + 1
         if p_int > l_newlist[middle_index]:
