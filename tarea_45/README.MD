@@ -1,6 +1,9 @@
 1. funciones_busqueda:
     En el fichero funciones_busqueda se define una función por cada algoritmo de búsqueda. 
-    Ambas funciones devuelven el número de iteraciones necesarias para hallar el resultado.
+    Ambas funciones devuelven el número de iteraciones necesarias para hallar el resultado. 
+    Al corregir el mismo ejercicio a otra compañera he visto que la función de búsqueda secuencial se aplica sobre los datos ya ordenador. 
+    Yo no lo he hecho de esta forma; he aplicado la función de búsqueda a la lista de datos no ordenada. No obstante, la conclusión a la que se llega
+    es la misma, ya que la eficiencia del algorítmo de búsqueda secuencial dependerá de la posición en la que se encuentre el elemento buscado.
 
 
 2. busqueda:
